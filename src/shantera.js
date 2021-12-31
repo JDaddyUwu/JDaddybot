@@ -47,7 +47,7 @@ Enano
 
 _*Ojito escribe tal y como esta en el mensaje*_
 
-ву ѕнαη∂υу`
+ву 🍒𝘿𝙖𝙙𝙙𝙮🍒`
 
 }
 
