@@ -1007,7 +1007,50 @@ break
 					}
 					break
 				
+				 case 'dinasty':
+				if (!isGroup) return reply(mess.only.group)
+				if (!isGroupAdmins) return reply(mess.only.admin)
+				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+				client.groupUpdateSubject(from, `𝐷𝑖𝑛𝑎𝑠𝑡𝑦 愛              ²⁰¹⁵`)
+				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
+				break 
+					
+				case 'dinamica':
+				if (!isGroup) return reply(mess.only.group)
+				if (!isGroupAdmins) return reply(mess.only.admin)
+				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+				client.groupUpdateSubject(from, `🍒Dinamica en 1 Hora🍒`)
+				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
+				break 
+
+				case 'bye':
+				if (!isGroup) return reply(mess.only.group)
+				if (!isGroupAdmins) return reply(mess.only.admin)
+				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+				client.groupUpdateSubject(from, `🍒Ban de Putas🍒`)
+				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
+				break 
+	
+				case 'actualizar':
+				case 'update':
+				if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? No eres Daddy')
+				reply('Espera un momento Daddy... Me estoy actualizando🍒')
+				exec(`bash update.sh`, (err, stdout) => {
+				if (err) return reply(err)
+				if (stdout) reply(`Ya me actualize Daddy`)
+				})
+				break
 				
+				case 'restaurar':
+				case 'restore':
+				if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? No eres Daddy')
+				reply('La información de este bot se borrará y se tendrá que escanear el código qr de nuevo')
+				exec(`bash restore.sh`, (err, stdout) => {
+				if (err) return reply(err)
+				if (stdout) reply(stdout)
+				})
+				break
+					
                                   case 'antitik':
                                         if (!isGroup) return reply(mess.only.group)
 					if (!isUser) return reply(mess.only.daftarB)
