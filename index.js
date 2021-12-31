@@ -1119,7 +1119,7 @@ break
 				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
 				break 
 	
-				case 'actualizar':
+				case 'actualizarr':
 				case 'update':
 				if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? No eres Daddy')
 				reply('Espera un momento Daddy... Me estoy actualizando🍒')
