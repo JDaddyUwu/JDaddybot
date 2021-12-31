@@ -327,12 +327,12 @@ async function starts() {
                                         pegatina: 'Calma, estoy haciendo tu sticker\n\n*Recuerda los stickersgif son de 9 segundos*\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
 					attp: 'Calma, estoy haciendo tu texto a sticker\n\n*Esto puede demorar unos minutos*\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
 					imgs: 'ey\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
-					mpcancion: 'Calmaoooo estoy procesando 😎\n\n*Convirtiendo de MP4 a MP3 🔄*\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
+					mpcancion: 'Calma estoy procesando\n\n*Convirtiendo de MP4 a MP3 🔄*\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
 					mpa: 'Euu 🥴\n\n*Estoy descargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
                                         mpv: 'Calma\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
 					insta: 'Calma\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
 					musica: 'Estoy bucando tu canción\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\nSi no envio tu musica checa que version tienes del bot con *version\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
-					musica2: 'Calma, estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\nSi no envio tu musica checa que version tienes del bot con *version\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
+					musica2: 'Calma, estoy bucando tu canción\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube*\n\n*Si el comando *play2 no funciona utiliza el comando *play*\n\nSi no envio tu musica checa que version tienes del bot con *version\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
 					daftarB: `「NO ESTAS REGISTRADO」\n\nPA NO APARECES EN MI BASE DE DATOS\n\nPara poder usarme escribe el siguente comando\n\nComando: ${prefix}daftar Nombre\nEjemplo: ${prefix}daftar Daddy`,
 				}
 			}
@@ -736,6 +736,24 @@ hasil = `${rate}Usted es ${random}% fan de cuties\n\n${cu}`
 reply(hasil)
 break
 					
+case 'simps':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Top 10 simps de 𝐷𝑖𝑛𝑎𝑠𝑡𝑦 愛\n\n'
+for(i = 0; i < 10; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break									
+					
 case 'putas':
 try{
 if (!isUser) return reply(mess.only.daftarB)
@@ -752,7 +770,7 @@ mentions(teks, d, true)
 console.log(e)
 reply('Hubo un error intentalo nuevamente :/')
 }
-break	
+break
 					
 case 'novia':
 try{
@@ -771,6 +789,24 @@ console.log(e)
 reply('Hubo un error intentalo nuevamente :/')
 } 
 break	
+					
+case 'novio':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Ten tu primer novio, virgen de mrd :) <3\n\n'
+for(i = 0; i < 1; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break						
 					
 case 'pendejos':
 try{
