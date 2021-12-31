@@ -531,13 +531,13 @@ if (budy.includes("https://m.facebook.com/")){
 		if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`*LINK DE WHATSAPP DETECTADO 📢* ${sender.split("@")[0]} Usted será expulsado del grupo`)
+		reply(`*LINK DE WHATSAPP DETECTADO 📢* ${sender.split("@")[0]} Usted será expulsado por perra espamera`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
-			reply("Adios mi loco")
+			reply("Adios puta")
 		}, 0)
 	}
 
@@ -1119,7 +1119,7 @@ break
 				client.sendMessage(from, 'El nombre del grupo se ha cambiado',MessageType.text, { quoted: mek} )	
 				break 
 	
-				case 'actualizarr':
+				case 'actualizar':
 				case 'update':
 				if (!isOwner) return reply('¿Quien eres tu para decirme que hacer? No eres Daddy')
 				reply('Espera un momento Daddy... Me estoy actualizando🍒')
