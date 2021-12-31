@@ -78,8 +78,8 @@ const { levelmenu } = require('./src/levelmenu')
 /******CARGA DE ENTRADA VCARD******/
 const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'VERSION:3.0\n' 
-            + 'FN:Daddy/ Nombre
-            + 'ORG:Shanduy;\n' // Propietario
+            + 'FN:Daddy/n' // Nombre
+            + 'ORG:Daddy;\n' // Propietario
             + 'TEL;type=CELL;type=VOICE;waid=13399999999:++1(339) 999 9999\n' // ID de WhatsApp + número de teléfono
             + 'END:VCARD'
 /******FIN DE ENTRADA VCARD******/
