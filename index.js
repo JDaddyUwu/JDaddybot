@@ -78,7 +78,7 @@ const { levelmenu } = require('./src/levelmenu')
 /******CARGA DE ENTRADA VCARD******/
 const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'VERSION:3.0\n' 
-            + 'FN:Daddy/n' // Nombre
+            + 'FN:Daddy\n' // Nombre
             + 'ORG:Daddy;\n' // Propietario
             + 'TEL;type=CELL;type=VOICE;waid=13399999999:++1(339) 999 9999\n' // ID de WhatsApp + número de teléfono
             + 'END:VCARD'
@@ -874,7 +874,7 @@ break
 	
 	case 'creador':
 	       client.sendMessage(from, {displayname: "Daddy", vcard: vcard}, MessageType.contact, { quoted: mek})
-		client.sendMessage(from, 'Hola gorda, este es un mensaje predeterminado.\n\nArriba esta mi contacto por si tienen algun problema con las descargas o yo que se.\nYo no soy dueño de este bot ni tampoco lo controlo, yo solo cree la base de datos y le doy mantenimiento.\nBueno disfruten del bot y si quieresnos puedes seguir en instagram.\n\n*Instagram:* https://www.instagram.com/dinasty_uwu\n\n*_Gracias',MessageType.text, { quoted: mek} )
+		client.sendMessage(from, 'Hola gorda, este es un mensaje predeterminado.\n\nArriba esta mi contacto por si tienen algun problema con las descargas o yo que se.\nYo no soy dueño de este bot ni tampoco lo controlo, yo solo cree la base de datos y le doy mantenimiento.\nBueno disfruten del bot y si quieresnos puedes seguir en instagram.\n\n*Instagram:* https://www.instagram.com/dinasty_uwu\n\n*_Gracias_*',MessageType.text, { quoted: mek} )
                 break
 	
 	
