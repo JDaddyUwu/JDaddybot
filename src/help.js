@@ -1,14 +1,13 @@
 const help = (prefix) => {
 	return `
 
-⌜ _*ShanBot by shanduy*_ ⌟  
+⌜ _*Daddybot by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_ ⌟  
 
 ◉ *INFORMACION*
    ○ Comando: ⌜ ${prefix} ⌟
    ○ Creador: shanduy™ 
-   ○ Cómo instalar el bot: https://youtu.be/HxZYNgW9aI8
-   ○ Mi Instagram: https://www.instagram.com/thepavos
-
+   ○ Grupo Original: https://chat.whatsapp.com/EidwZ4FKsl39ziZB52gjMq
+   ○ Instagram: https://www.instagram.com/dinasty_uwu
 ◉ *COMUNICADO*
 Nuevo video de cómo instalar el bot :)
 https://youtu.be/HxZYNgW9aI8
@@ -107,7 +106,7 @@ Para activar los NSFW coloque el siguiente comando ${prefix}nsfw 1 y para desact
 No te olvides de seguirme en instagram flaco ;)
 
 
-_*by shanduy*_
+_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_
 
 
 ⌜ *ごきげんよう :)* ⌟ 
