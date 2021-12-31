@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 echo -e 
 rm -r Nazwa.json
   ____                 _             _       _                 _                      _
