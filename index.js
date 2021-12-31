@@ -78,7 +78,7 @@ const { levelmenu } = require('./src/levelmenu')
 /******CARGA DE ENTRADA VCARD******/
 const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'VERSION:3.0\n' 
-            + 'FN:Shan\n' // Nombre
+            + 'FN:Daddy/ Nombre
             + 'ORG:Shanduy;\n' // Propietario
             + 'TEL;type=CELL;type=VOICE;waid=13399999999:++1(339) 999 9999\n' // ID de WhatsApp + número de teléfono
             + 'END:VCARD'
@@ -328,7 +328,7 @@ async function starts() {
 					attp: 'Calma, estoy haciendo tu texto a sticker\n\n*Esto puede demorar unos minutos*\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
 					imgs: 'ey\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
 					mpcancion: 'Calma estoy procesando\n\n*Convirtiendo de MP4 a MP3 🔄*\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
-					mpa: 'Euu 🥴\n\n*Estoy descargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
+					mpa: 'Euu\n\n*Estoy descargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
                                         mpv: 'Calma\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
 					insta: 'Calma\n\n*Estoy descargando tu post 🔄*\n\nAguarde un momento, por favor\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
 					musica: 'Estoy bucando tu canción\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube*\n\n*Si el comando *play no funciona utiliza el comando *play2*\n\nSi no envio tu musica checa que version tienes del bot con *version\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒*_',
@@ -874,7 +874,7 @@ break
 	
 	case 'creador':
 	       client.sendMessage(from, {displayname: "Daddy", vcard: vcard}, MessageType.contact, { quoted: mek})
-		client.sendMessage(from, 'Hola gorda, este es un mensaje predeterminado.\n\nArriba esta mi contacto por si tienen algun problema con las descargas o yo que se.\nYo no soy dueño de este bot ni tampoco lo controlo, yo solo cree la base de datos y le doy mantenimiento.\nBueno disfruten del bot y si quieresnos puedes seguir en instagram.\n\n*Instagram:* https://www.instagram.com/dinasty_uwu\n\n*Gracias*_',MessageType.text, { quoted: mek} )
+		client.sendMessage(from, 'Hola gorda, este es un mensaje predeterminado.\n\nArriba esta mi contacto por si tienen algun problema con las descargas o yo que se.\nYo no soy dueño de este bot ni tampoco lo controlo, yo solo cree la base de datos y le doy mantenimiento.\nBueno disfruten del bot y si quieresnos puedes seguir en instagram.\n\n*Instagram:* https://www.instagram.com/dinasty_uwu\n\n*_Gracias',MessageType.text, { quoted: mek} )
                 break
 	
 	
@@ -1230,6 +1230,7 @@ client.sendMessage(from, options, text, { quoted: mek } )
 break
                                       
 case 'kick':
+case 'alv':
 case 'pafuera':
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1493,7 +1494,7 @@ break
 						fs.unlinkSync(media)
 						if (err) return reply('❌ No se pudo convertir el sticker en imágenes')
 						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\n_*by shanduy*_'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\n_*by 🍒𝘿𝙖𝙙𝙙𝙮🍒_'})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1525,7 +1526,7 @@ break
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=23hamilton`)
                 if (anu.error) return reply(anu.error)
-                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por shanduy*_`
+                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por 🍒𝘿𝙖𝙙𝙙𝙮🍒*_`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1539,7 +1540,7 @@ break
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=23shanduy`)
                 if (anu.error) return reply(anu.error)
-                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por shanduy*_`
+                infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n_*Servicio proveido por 🍒𝘿𝙖𝙙𝙙𝙮🍒*_`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1553,7 +1554,7 @@ break
 		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 		anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
 		if (anu.error) return reply(anu.error.yt)
-		teks = `*⌜Video Encontrado ✅⌟*\n◉ *Título:* ${anu.result.title} \n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*\n\n_*Servicio proveido por shanduy*_`
+		teks = `*⌜Video Encontrado ✅⌟*\n◉ *Título:* ${anu.result.title} \n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*\n\n_*Servicio proveido por 🍒𝘿𝙖𝙙𝙙𝙮🍒*_`
 		lagu = await getBuffer(anu.result.thumbnail)
                 client.sendMessage(from, lagu, image, {quoted: mek, caption: teks})
 		buffer = await getBuffer(anu.result.url_video)
@@ -1569,7 +1570,7 @@ break
                   reply(mess.only.insta)
                 })
                 a = res[0]
-                result = `*⌜Post Encontrado ✅⌟*\n◉*Titulo:* ${a.judul} \n◉ *Fuente:* ${a.source} \n◉ *Tamaño:* ${a.size} \n◉ *Calidad:* ${a.quality} \n◉ *Tipo:* ${a.type} \n◉ *Nombre del archivo:* ${a.judul}.${a.type}\n\n*ESPERE ENVIANDO SU POST ⚠*\n\n_*Servicio proveido por shanduy*_`
+                result = `*⌜Post Encontrado ✅⌟*\n◉*Titulo:* ${a.judul} \n◉ *Fuente:* ${a.source} \n◉ *Tamaño:* ${a.size} \n◉ *Calidad:* ${a.quality} \n◉ *Tipo:* ${a.type} \n◉ *Nombre del archivo:* ${a.judul}.${a.type}\n\n*ESPERE ENVIANDO SU POST ⚠*\n\n_*Servicio proveido por 🍒𝘿𝙖𝙙𝙙𝙮🍒*_`
                 sendFileFromUrl(a.thumb, image, {caption: result, quoted: sam})
                 sendFileFromUrl(a.link, video, { mimetype: 'video/mp4',quoted: sam, filename: `${a.judul}.${a.type}`})
                 break
@@ -1581,7 +1582,7 @@ break
 case 'daftar':
 client.updatePresence(from, Presence.composing)
 if (isUser) return reply('Ya estas registrado 🧐')
-if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar shanduy`)
+if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar Daddy`)
 var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
