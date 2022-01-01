@@ -1751,15 +1751,19 @@ break
                 default:
                 
 		if (budy.includes(`Todo bien`)) {
-                  reply(`Si amigo todo bien, vite`)
+                  reply(`no`)
+                  }
+
+                 if (budy.includes(`!clan`)) {
+                  reply(`aqui esta el link del clan de Clash Royale del Grupo\nhttps://link.clashroyale.com/invite/clan/en?tag=LGV8LJCL&token=jdzwt3yj&platform=android`)
                   }
 
 		if (budy.includes(`Buenos dias`)) {
-                  reply(`Buenos Dias trolos de mierda`)
+                  reply(`Buenos Dias Bombon`)
                   }
 
-		if (budy.includes(`Bot gay`)) {
-                  reply(`Miren a este boludito`)
+		if (budy.includes(`Bot`)) {
+                  reply(`¿ahora que queres?, puta`)
                   }
 					
 		if (budy.includes(`Che messi vo le preguntaste?`)) {
@@ -1767,11 +1771,11 @@ break
                   }
 
 		if (budy.includes(`Gracias`)) {
-                  reply(`De nada padre`)
+                  reply(`De nada Bombon`)
                   }
 
-		if (budy.includes(`Bien gracias y tu?`)) {
-                  reply(`Opa yazmin te extrañe :(`)
+		if (budy.includes(`porno`)) {
+                  reply(`silencio pajero 👺`)
                   }
 					
 		if (budy.includes(`Opa`)) {
