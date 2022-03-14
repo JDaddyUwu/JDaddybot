@@ -919,7 +919,7 @@ break
 					})
 					break
                                 case 'listadmins':
-				case 'adminlist':
+				case 'admis':
 					client.updatePresence(from, Presence.composing) 
                                         if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
@@ -939,6 +939,7 @@ break
 					reply(`El prefijo se ha cambiado correctamente a : ${prefix}`)
 					break
 			case 'todos':
+				case 'tagall':		
 				client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
                                         if (!isUser) return reply(mess.only.daftarB)
@@ -981,7 +982,7 @@ break
 						reply('')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `*「 _*by shanduy*_ 」*\n\n${body.slice(4)}`)
+							sendMess(_.jid, `*「 _*by Daddy*_ 」*\n\n${body.slice(4)}`)
 						}
 						reply('Transmisión exitosa')
 					}
@@ -1294,7 +1295,7 @@ client.groupMakeAdmin(from, mentioned)
 }
 break				
 				
-case 'linkgc':
+case 'link':
 client.updatePresence(from, Presence.composing) 
 if (!isGroup) return reply(mess.only.group)
 if (!isUser) return reply(mess.only.daftarB)
@@ -1318,7 +1319,7 @@ client.groupSettingChange (from, GroupSettingChange.messageSend, true);
 reply(close)
 break
                 
-case 'opengc':                
+case 'open':                
 client.updatePresence(from, Presence.composing) 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1346,7 +1347,7 @@ reply('No se pudo agregar el destino, tal vez porque es privado')
 }
 break
 				
-case 'fgc': 
+case 'pp': 
 reply(mess.foto)
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1356,7 +1357,7 @@ await client.updateProfilePicture (from, media)
 reply('*⌊✅⌉ El cambio de foto del grupo fue exitoso*')
 break						
 				
-case 'ngc':
+case 'name':
       if (!isGroup) return reply(mess.only.group)
       if (!isGroupAdmins) return reply(mess.only.admin)
       if (!isBotGroupAdmins) return reply(mess.only.Badmin)
