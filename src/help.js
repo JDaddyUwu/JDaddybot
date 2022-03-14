@@ -5,12 +5,9 @@ const help = (prefix) => {
 
 ◉ *INFORMACION*
    ○ Comando: ⌜ ${prefix} ⌟
-   ○ Creador: shanduy™ 
-   ○ Grupo Original: https://chat.whatsapp.com/EidwZ4FKsl39ziZB52gjMq
+   ○ Creador: Daddy
+   ○ Grupo Original: https://chat.whatsapp.com/L6XJJE36gSOAdL5tRgLI2O
    ○ Instagram: https://www.instagram.com/dinasty_uwu
-◉ *COMUNICADO*
-Nuevo video de cómo instalar el bot :)
-https://youtu.be/HxZYNgW9aI8
 
 ◉ *PARA USAR EL BOT*
 Registrate con el comando ${prefix}daftar y tu nombre
