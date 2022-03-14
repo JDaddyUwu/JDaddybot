@@ -9,7 +9,9 @@ rm -r Nazwa.json
  |_| \_\  \___| |___/  \__|  \__,_| |_.__/  |_|  \___|  \___| |_|  \___| |_| |_|  \__,_|  \___/  (_) (_)
 
 \e[0m'
+
 sleep 2.0
+
 echo -e '\033[0m\033[1;31m
 
 LISTO!! YA PUEDES VOLVER A ESCANEAR EL CODIGO
