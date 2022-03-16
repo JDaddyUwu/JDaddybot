@@ -878,7 +878,7 @@ break
                 break
 	
 	
-	case 'hidetag':
+	case 'tag':
                 client.updatePresence(from, Presence.composing) 
                 if (!isGroupAdmins) return reply(mess.only.Badmin)
 		if (!isUser) return reply(mess.only.daftarB)
