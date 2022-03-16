@@ -265,7 +265,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i.ibb.co/bg5pXYq/IMG-20220315-WA2304.jpg'
 				}
-				teks = `Hola pedazo de aborto @${num.split('@')[0]}\n\nComo estas¿? bueno en realidad no me importa\n\nPresentate o te violo\n\nCumple las reglas gil`
+				teks = `Hola @${num.split('@')[0]}\n\nBienvenido a Dinasty\n\nPresentate con Nombre,Edad, Foto.\n\nPuedes pedirle la ficha de presentación al Grupo.`
 				  let buff = await getBuffer(ppimg)
 			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -275,7 +275,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i.ibb.co/bg5pXYq/IMG-20220315-WA2304.jpg'
 				}
-				teks = `Se fue in diota :D @${num.split('@')[0]}`
+				teks = `Se fue un pendejo 😔🤙🏻 @${num.split('@')[0]}`
 				 let buff = await getBuffer(ppimg)
 			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
