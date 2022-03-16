@@ -876,7 +876,37 @@ break
 	       client.sendMessage(from, {displayname: "Daddy", vcard: vcard}, MessageType.contact, { quoted: mek})
 		client.sendMessage(from, 'Hola gorda, este es un mensaje predeterminado.\n\nArriba esta mi contacto por si tienen algun problema con las descargas o yo que se.\No anden mamando con el bot y no hagan tanto spam o los bloqueo de sus funciones 👺.\nBueno disfruten del bot y si quieresnos puedes seguir en instagram.\n\n*Instagram:* https://www.instagram.com/dinasty_uwu\n\n*_Gracias_*',MessageType.text, { quoted: mek} )
                 break
-	
+
+	case 'pium':
+case 'pum':
+case 'pendejo':
+case 'kick':
+case 'pafuera':
+if (!isUser) return reply(mess.only.daftarB)
+if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isGroup) return reply(mess.only.group)
+if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) return reply('Marca al que vamos a funar')
+if (mek.message.extendedTextMessage.contextInfo.participant === undefined) {
+entah = mek.message.extendedTextMessage.contextInfo.mentionedJid
+if (entah.length > 1) {
+var mems_ids = []
+for (let ids of entah) {
+mems_ids.push(ids)
+}
+client.groupRemove(from, mems_ids)
+} else {
+client.groupRemove(from, [entah[0]])
+}
+} else {
+entah = mek.message.extendedTextMessage.contextInfo.participant
+client.groupRemove(from, [entah])
+}
+break
+
+
+
+
 	
 	case 'ht':
                 client.updatePresence(from, Presence.composing) 
