@@ -260,25 +260,29 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `HOLAA @${num.split('@')[0]} ¿Que TAl?\n\n『Bienvenido a *${mdata.subject}*』\n\nAhora Incate y No Rompas Las Reglas👺\n\n_Si Te Pasas De SIMPatico/a o Rompes Alguna Regla Te Llevas Ban En El Orto_\n\n*🍒NO Olvides Presentarte🍒*`
-                          client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
+				try {
+					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i.ibb.co/bg5pXYq/IMG-20220315-WA2304.jpg'
+				}
+				teks = `Hola pedazo de aborto @${num.split('@')[0]}\n\nComo estas¿? bueno en realidad no me importa\n\nPresentate o te violo\n\nCumple las reglas gil`
+				  let buff = await getBuffer(ppimg)
+			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `Bueno, se fue @${num.split('@')[0]} 👋\n\nMe vale verga xd`
-				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
+				try {
+					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i.ibb.co/bg5pXYq/IMG-20220315-WA2304.jpg'
+				}
+				teks = `Se fue in diota :D @${num.split('@')[0]}`
+				 let buff = await getBuffer(ppimg)
+			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
 			console.log('Error: %s', color(e, 'red'))
 		}
 	})
-
-		client.on('CB:Blocklist', json => {
-            if (blocked.length > 2) return
-	    for (let i of json[1].blocklist) {
-	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
-	    }
-	})
-
 	client.on('chat-update', async (mek) => {
 		try {
                         if (!mek.hasNewMessage) return
