@@ -265,7 +265,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i.ibb.co/bg5pXYq/IMG-20220315-WA2304.jpg'
 				}
-				teks = `Hola @${num.split('@')[0]}\n\nBienvenido a Dinasty\n\nPresentate con Nombre,Edad, Foto.\n\nPuedes pedirle la ficha de presentación al Grupo.`
+				teks = `𝙋𝙧𝙚𝙨𝙚𝙣𝙩𝙖𝙧𝙨𝙚 𝙥𝙖𝙧𝙖 𝐷𝑖𝑛𝑎𝑠𝑡𝑦 愛 @${num.split('@')[0]}\n\n🍒𝙉𝙤𝙢𝙗𝙧𝙚\n\n🍒𝙀𝙙𝙖𝙙:\n\n🍒𝙋𝙖𝙞𝙨:\n\n🦄𝙁𝙤𝙩𝙤:.`
 				  let buff = await getBuffer(ppimg)
 			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
